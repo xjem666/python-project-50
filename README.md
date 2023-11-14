@@ -38,3 +38,8 @@ optional arguments:
                         output format (default: stylish)
 ```
 ***
+
+### Examples of using the program:
+[![asciicast](https://asciinema.org/a/nCcU4mjaTufDCbjp1edJlVpDh.svg)](https://asciinema.org/a/nCcU4mjaTufDCbjp1edJlVpDh)
+[![asciicast](https://asciinema.org/a/Ov3PJpED7dMwoyDEEfBFR7KK8.svg)](https://asciinema.org/a/Ov3PJpED7dMwoyDEEfBFR7KK8)
+[![asciicast](https://asciinema.org/a/nNePSnPdE3bq0V9ASiC72uGlW.svg)](https://asciinema.org/a/nNePSnPdE3bq0V9ASiC72uGlW)
