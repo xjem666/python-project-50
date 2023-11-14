@@ -1,4 +1,3 @@
-from gendiff.gendiff import generate_diff  # noqa: 401
+from gendiff.diff_generator import generate_diff
 
-
-__all__ = ['generate_diff']
+__all__ = ('generate_diff',)
