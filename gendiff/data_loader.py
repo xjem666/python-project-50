@@ -2,7 +2,7 @@ import json
 import yaml
 
 
-def loader(data, extension):
+def recognize(data, extension):
     if extension == 'json':
         return json.load(data)
     elif extension == 'yaml' or extension == 'yml':
