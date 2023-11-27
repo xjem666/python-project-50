@@ -35,4 +35,4 @@ def test_json_diff():
     file_path3 = 'tests/fixtures/file3.json'
     file_path4 = 'tests/fixtures/file4.json'
     file_path_expected = 'tests/fixtures/expected5.json'
-    assert generate_diff(file_path3, file_path4, 'json') == (open(file_path_expected).read())
+    assert generate_diff(file_path3, file_path4, 'json') == (open(file_path_expected).read())git
