@@ -4,7 +4,7 @@ from gendiff.formatters.plain_formatter import plain
 from gendiff.formatters.stylish_formatter import stylish
 
 
-def select_formats(file1, file2, formatter):
+def generate_diff(file1, file2, formatter):
     if formatter == 'stylish':
         return stylish(create_diff(file1, file2))
     elif formatter == 'plain':
