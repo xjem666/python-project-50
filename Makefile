@@ -8,7 +8,7 @@ build:
 	poetry build
 publish:
 	poetry publish --dry-run
-lint:
+linter:
 	poetry run flake8 gendiff
 test:
 	poetry run pytest
