@@ -1,16 +1,17 @@
-from gendiff.diff_creator import create_diff
-from gendiff.formatters.json_formatter import json_formatter
-from gendiff.formatters.plain_formatter import plain
-from gendiff.formatters.stylish_formatter import stylish
+from gendiff.booleans_cleaner import format_bool_from_python_to_json
+
+from gendiff.data_reader import read_data
+from gendiff.data_reader import define_extension
+from gendiff.data_loader import recognize
+from gendiff.format_selector import select_formats
 
 
-def generate_diff(file1, file2, formatter):
-    if formatter == 'stylish':
-        return stylish(create_diff(file1, file2))
-    elif formatter == 'plain':
-        return plain(create_diff(file1, file2))
-    elif formatter == 'json':
-        return json_formatter(create_diff(file1, file2))
-    else:
-        raise Exception('Unknown format. Available formats are:'
-                        ' stylish(default), plain, json')
+def generate_diff(file_path1, file_path2, formatter='stylish'):
+
+    file1 = recognize(read_data(file_path1), define_extension(file_path1))
+    file2 = recognize(read_data(file_path2), define_extension(file_path2))
+
+    formatted_file1 = format_bool_from_python_to_json(file1)
+    formatted_file2 = format_bool_from_python_to_json(file2)
+
+    return select_formats(formatted_file1, formatted_file2, formatter)
